@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 
 // MONGOOSE
-mongoose.connect("mongodb+srv://admin-meline:Hell0y0u@atlascluster.xbuuwvk.mongodb.net/todolistDB", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://" + process.env.MONGO_CONNECT + "/todolistDB", { useNewUrlParser: true });
 
 // SCHEMA
 const itemsSchema = new mongoose.Schema ({
